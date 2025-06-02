@@ -1,56 +1,76 @@
+/*réglage généraux*/
+@font-face {
+    font-family: "cartoon-titre";
+    src: url(./Starbim.otf);
+}
+
+@font-face {
+    font-family: "base-titre";
+    src: url(./Bestime.otf);
+}
+
 * {
-   margin :0;
-   padding: 0;
-   box-sizing: border-box;
+    /* supprimer toutes les marges par defaults pour ne pas etre embété*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
-   /* Palette de couleur pour mon CV */
-   --color1:#800000;
-   --color2:#982B1C;
-   --color3:#DAD4B5;
-   --color4:#F2E8C6;
+    /*palettede couleur*/
+    --couleur-claire: #97FEED;
+    --couleur-midclaire: #35A29F;
+    --couleur-midfonce: #0B666A; 
+    --couleur-fonce: #071952;
+}
+body{
+font-family: "base-titre";
+background-color: var(--couleur-midclaire);
+color: var(--couleur-fonce);
+}
+h1{
+font-family: "cartoon-titre";
+font-size: 3rem;
+
+
 }
 
-body {
-    background-color: var(--color3);
+h3{
+font-size: 3rem;
+
+}
+    
+
+/*réglage de la partie nav*/
+#logo {
+        width: 350px;
 }
 
-#info {
-    width : 40%;
-    margin : 15px;
-    padding : 15px;
-    background-color: var(--color4);
-    color : var(--color1);
-    border : var(--color1) solid 2px;
-    border-radius: 15px;  
-}
+/*réglage de la partie header*/
+header {
+    background: radial-gradient(circle at center, var(--couleur-claire), var(--couleur-midclaire));
+    width: 100vw;
+    background-color: rgb(58, 135, 144);
+    color: var(--couleur-midfonce);
+    height: 13vh;
+    padding: 10px;
 
-#info>a {
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    text-decoration: none;
-    width : 50%;
-    aspect-ratio : 4/1;
-    background-color: var(--color1);
-    color: var(--color4);
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin: 10px 0;
+    flex-direction:column ;
+    justify-content: space-evenly;
     align-items: center;
 }
+/*réglage de la partie main*/
 
-#info>h1 {
+/*réglage de la partie aside*/
 
+
+#boulanger{
+    float: left;
+    padding: 5px;
+    height: 160px;
 }
 
-#info>a>img {
-    height: 100%;
-    display: block;
+#Ircem{
+    float: left;
+    padding: 5px;
+    height: 160px;
 }
-
-#info>a>p {
-    padding-left: 20px;
-    
-}
-    
